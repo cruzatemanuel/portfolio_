@@ -39,7 +39,7 @@ describe('Shared Shell Components', () => {
     expect(screen.getByRole('link', { name: 'Email Contact' })).toBeInTheDocument();
   });
 
-  it('renders ContactCTA section with call to action link', () => {
+  it('renders ContactCTA section with call to action button', () => {
     render(
       <MemoryRouter>
         <ContactCTA />
@@ -47,6 +47,6 @@ describe('Shared Shell Components', () => {
     );
 
     expect(screen.getByText("Let's build something exceptional together.")).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Navigate to contact page' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Contact me/i })).toBeInTheDocument();
   });
 });

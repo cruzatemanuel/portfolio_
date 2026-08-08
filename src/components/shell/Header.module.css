@@ -11,12 +11,18 @@
 }
 
 .innerNav {
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 0.9rem var(--space-6);
+  padding: 1.25rem var(--space-12);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .innerNav {
+    padding: 1rem var(--space-6);
+  }
 }
 
 .brand {

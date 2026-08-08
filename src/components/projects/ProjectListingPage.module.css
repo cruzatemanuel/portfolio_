@@ -1,15 +1,15 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
-  padding-bottom: var(--space-12);
+  gap: var(--space-16);
+  padding-bottom: var(--space-16);
 }
 
 .heroBox {
   position: relative;
   width: 100%;
   border-radius: var(--radius-xl);
-  padding: var(--space-12) var(--space-8);
+  padding: var(--space-16) var(--space-12);
   background-color: var(--color-bg-secondary);
   border: 1px solid var(--color-border-subtle);
   overflow: hidden;

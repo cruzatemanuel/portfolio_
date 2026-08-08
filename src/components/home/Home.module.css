@@ -1,8 +1,8 @@
 .homeContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
-  padding-bottom: var(--space-12);
+  gap: var(--space-24);
+  padding-bottom: var(--space-16);
 }
 
 .heroSection {
