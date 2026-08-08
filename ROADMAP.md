@@ -2,7 +2,7 @@
 
 **Stack:** React + TypeScript + Vite + React Router + CSS Modules · Motion/GSAP/OGL/MathJS as needed · Formspree · GitHub Pages + GitHub Actions · Vitest + React Testing Library
 
-**Status:** Phase 0, 1, 2, 3, 4, 5, 6, 7 & 8 Complete. Ready for Phase 9 & 10 (Accessibility, Motion & Responsive Pass).
+**Status:** Phase 0 through 11 Complete. Ready for Phase 12 (Deployment Workflow & GitHub Actions Setup).
 
 ---
 
