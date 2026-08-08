@@ -1,27 +1,19 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import { Sun, Moon, Monitor, Menu, X } from 'lucide-react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
+import { Sun, Moon, Menu, X } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
 import styles from './Header.module.css';
 
 export const Header: React.FC = () => {
-  const { theme, resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   const toggleTheme = () => {
-    if (theme === 'system') {
-      setTheme('light');
-    } else if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('system');
-    }
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
-  const renderThemeIcon = () => {
-    if (theme === 'system') return <Monitor size={16} />;
-    return resolvedTheme === 'dark' ? <Moon size={16} /> : <Sun size={16} />;
-  };
+  const isHome = location.pathname === '/';
 
   return (
     <header className={styles.headerShell}>
@@ -31,31 +23,31 @@ export const Header: React.FC = () => {
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Main Navigation">
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/graphic-design"
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Graphic Design
-          </NavLink>
-          <NavLink
-            to="/dev-projects"
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Dev Projects
-          </NavLink>
+          {isHome ? (
+            <a href="#projects" className={styles.navLink}>
+              Projects
+            </a>
+          ) : (
+            <NavLink
+              to="/dev-projects"
+              className={({ isActive }) =>
+                isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
+              }
+            >
+              Projects
+            </NavLink>
+          )}
+
+          {isHome ? (
+            <a href="#experience" className={styles.navLink}>
+              Experience
+            </a>
+          ) : (
+            <Link to="/#experience" className={styles.navLink}>
+              Experience
+            </Link>
+          )}
+
           <NavLink
             to="/contact"
             className={({ isActive }) =>
@@ -68,11 +60,10 @@ export const Header: React.FC = () => {
           <button
             onClick={toggleTheme}
             className={styles.themeToggle}
-            aria-label={`Current theme ${theme}. Click to switch theme.`}
-            title={`Theme: ${theme} (${resolvedTheme})`}
+            aria-label="Toggle dark/light theme"
+            title="Toggle theme"
           >
-            {renderThemeIcon()}
-            <span style={{ textTransform: 'capitalize' }}>{theme}</span>
+            {resolvedTheme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
           </button>
         </nav>
 
@@ -82,40 +73,39 @@ export const Header: React.FC = () => {
           aria-label="Toggle Navigation Menu"
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {mobileOpen && (
         <nav className={styles.mobileDrawer} aria-label="Mobile Navigation">
-          <NavLink
-            to="/"
-            end
-            onClick={() => setMobileOpen(false)}
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/graphic-design"
-            onClick={() => setMobileOpen(false)}
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Graphic Design
-          </NavLink>
-          <NavLink
-            to="/dev-projects"
-            onClick={() => setMobileOpen(false)}
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Dev Projects
-          </NavLink>
+          <Link to="/" onClick={() => setMobileOpen(false)} className={styles.navLink}>
+            Emanuel Cruzat
+          </Link>
+          {isHome ? (
+            <a href="#projects" onClick={() => setMobileOpen(false)} className={styles.navLink}>
+              Projects
+            </a>
+          ) : (
+            <NavLink
+              to="/dev-projects"
+              onClick={() => setMobileOpen(false)}
+              className={({ isActive }) =>
+                isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
+              }
+            >
+              Projects
+            </NavLink>
+          )}
+          {isHome ? (
+            <a href="#experience" onClick={() => setMobileOpen(false)} className={styles.navLink}>
+              Experience
+            </a>
+          ) : (
+            <Link to="/#experience" onClick={() => setMobileOpen(false)} className={styles.navLink}>
+              Experience
+            </Link>
+          )}
           <NavLink
             to="/contact"
             onClick={() => setMobileOpen(false)}
@@ -129,10 +119,11 @@ export const Header: React.FC = () => {
           <button
             onClick={toggleTheme}
             className={styles.themeToggle}
-            style={{ width: 'fit-content', marginTop: '0.5rem' }}
+            style={{ width: 'fit-content', marginTop: '0.25rem' }}
+            aria-label="Toggle dark/light theme"
           >
-            {renderThemeIcon()}
-            <span style={{ textTransform: 'capitalize' }}>Theme: {theme}</span>
+            {resolvedTheme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            <span style={{ fontSize: '0.8125rem' }}>Switch Mode</span>
           </button>
         </nav>
       )}
@@ -141,3 +132,4 @@ export const Header: React.FC = () => {
 };
 
 export default Header;
+

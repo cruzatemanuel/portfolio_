@@ -11,16 +11,15 @@ describe('Shared Shell Components', () => {
   it('renders Header brand text and navigation links', () => {
     render(
       <ThemeProvider>
-        <MemoryRouter>
+        <MemoryRouter initialEntries={['/']}>
           <Header />
         </MemoryRouter>
       </ThemeProvider>
     );
 
     expect(screen.getByText('Emanuel Cruzat')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Home' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Graphic Design' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Dev Projects' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Projects' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Experience' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Contact' })).toBeInTheDocument();
   });
 
@@ -35,7 +34,6 @@ describe('Shared Shell Components', () => {
 
     expect(screen.getByRole('link', { name: 'LinkedIn Profile' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'GitHub Profile' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Instagram Profile' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Email Contact' })).toBeInTheDocument();
   });
 
@@ -46,7 +44,8 @@ describe('Shared Shell Components', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText("Let's build something exceptional together.")).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Contact me/i })).toBeInTheDocument();
+    expect(screen.getByText("Let's build scalable systems together.")).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Navigate to Contact page/i })).toBeInTheDocument();
   });
 });
+

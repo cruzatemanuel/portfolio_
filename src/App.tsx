@@ -4,7 +4,6 @@ import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/shell/Header';
 import Footer from './components/shell/Footer';
 import Home from './routes/Home';
-import GraphicDesign from './routes/GraphicDesign';
 import DevProjects from './routes/DevProjects';
 import Contact from './routes/Contact';
 
@@ -16,8 +15,8 @@ export const AppContent: React.FC = () => {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/graphic-design" element={<GraphicDesign />} />
             <Route path="/dev-projects" element={<DevProjects />} />
+            <Route path="/projects" element={<DevProjects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
@@ -36,3 +35,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

@@ -8,9 +8,9 @@
 
 ## Prerequisite Status
 
-- `AppleDesign_SKILLS.md` — ✅ Available and integrated into tokens
+- `design.md` — ✅ Modern Developer Visual System (Black/White/Gray + Tech Green accent)
 - `prompts/*.md` — ✅ All 7 component prompt files available
-- Placeholder Content Model — ✅ Ready to be defined in Phase 2
+- Placeholder Content Model — ✅ Defined in Phase 2
 
 
 ---

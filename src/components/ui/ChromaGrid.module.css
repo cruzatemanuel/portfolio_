@@ -29,7 +29,7 @@
 .chromaCard:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--card-accent, var(--color-accent));
+  border-color: var(--color-accent);
 }
 
 .cardImageWrapper {

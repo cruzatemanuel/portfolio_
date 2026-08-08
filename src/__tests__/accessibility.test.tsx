@@ -5,7 +5,6 @@ import { describe, it, expect } from 'vitest';
 import { ThemeProvider } from '../context/ThemeContext';
 import App from '../App';
 import Home from '../routes/Home';
-import GraphicDesign from '../routes/GraphicDesign';
 import DevProjects from '../routes/DevProjects';
 import Contact from '../routes/Contact';
 
@@ -19,23 +18,6 @@ describe('Accessibility & Landmarks (Phase 9 & 11)', () => {
     expect(screen.getByRole('contentinfo')).toBeInTheDocument(); // <footer>
   });
 
-  it('ensures all images have descriptive alt text', () => {
-    render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <Home />
-        </MemoryRouter>
-      </ThemeProvider>
-    );
-
-    const images = screen.getAllByRole('img');
-    expect(images.length).toBeGreaterThan(0);
-    images.forEach((img) => {
-      expect(img).toHaveAttribute('alt');
-      expect(img.getAttribute('alt')).not.toBe('');
-    });
-  });
-
   it('ensures all interactive social links have descriptive aria-labels', () => {
     render(
       <ThemeProvider>
@@ -47,20 +29,10 @@ describe('Accessibility & Landmarks (Phase 9 & 11)', () => {
 
     expect(screen.getByRole('link', { name: 'LinkedIn Profile' })).toHaveAttribute('href');
     expect(screen.getByRole('link', { name: 'GitHub Profile' })).toHaveAttribute('href');
-    expect(screen.getByRole('link', { name: 'Instagram Profile' })).toHaveAttribute('href');
     expect(screen.getByRole('link', { name: 'Email Contact' })).toHaveAttribute('href');
   });
 
-  it('renders accessible section landmarks on Graphic Design and Dev Projects pages', () => {
-    const { container: gdContainer } = render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <GraphicDesign />
-        </MemoryRouter>
-      </ThemeProvider>
-    );
-    expect(gdContainer.querySelector('section[aria-label="Graphic Design Hero"]')).toBeInTheDocument();
-
+  it('renders accessible section landmarks on Dev Projects page', () => {
     const { container: devContainer } = render(
       <ThemeProvider>
         <MemoryRouter>
@@ -84,3 +56,4 @@ describe('Accessibility & Landmarks (Phase 9 & 11)', () => {
     expect(input).toBeInTheDocument();
   });
 });
+

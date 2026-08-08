@@ -1,16 +1,11 @@
 import React from 'react';
-import { Linkedin, Github, Instagram, Mail, FileText } from 'lucide-react';
+import { Linkedin, Github, Mail, FileText, ArrowUpRight, Code2 } from 'lucide-react';
 import { portfolioContent } from '../content';
-import ShinyText from '../components/ui/ShinyText';
-import SpecularButton from '../components/ui/SpecularButton';
-import ChromaGrid from '../components/ui/ChromaGrid';
 import ContactCTA from '../components/shell/ContactCTA';
-import ToolMarquee from '../components/home/ToolMarquee';
 import styles from '../components/home/Home.module.css';
 
 export const Home: React.FC = () => {
-  const { profile, experiences, projects } = portfolioContent;
-  const featuredProjects = projects.filter((p) => p.featured);
+  const { profile, experiences, projects, tools } = portfolioContent;
 
   const handleResumeClick = () => {
     window.open(profile.resumeUrl, '_blank', 'noopener,noreferrer');
@@ -18,136 +13,151 @@ export const Home: React.FC = () => {
 
   return (
     <div className={styles.homeContainer}>
-      {/* 1. Introduction / Hero */}
+      {/* 1. Hero / Developer Profile Header */}
       <section className={styles.heroSection} aria-label="Introduction">
-        <div className={styles.portraitWrapper}>
-          <img
-            src={profile.portraitUrl}
-            alt={profile.portraitAlt}
-            className={styles.portraitImage}
-          />
+        <div className={styles.heroHeaderGroup}>
+          <h1 className={styles.developerName}>{profile.name}</h1>
+          <div className={styles.jobTitleGroup}>
+            <span className={styles.primaryJobTitle}>Software &amp; Data Engineer</span>
+            <span className={styles.secondarySpecialization}>
+              &mdash; Distributed Data Pipelines &amp; High-Performance Systems
+            </span>
+          </div>
         </div>
 
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroName}>{profile.name}</h1>
-          <div className={styles.heroRole}>
-            <ShinyText
-              text={profile.role}
-              color="var(--color-accent)"
-              shineColor="#ffffff"
-              spread={120}
-              speed={2.5}
-            />
-          </div>
-          <p className={styles.heroBio}>{profile.bio}</p>
+        <p className={styles.heroBio}>{profile.bio}</p>
 
-          <div style={{ marginTop: '0.5rem' }}>
-            <SpecularButton
-              size="lg"
-              onClick={handleResumeClick}
-              lineColor="#ffffff"
-              baseColor="#0071e3"
-              tint="#0071e3"
-            >
-              <FileText size={18} />
-              <span>View Résumé</span>
-            </SpecularButton>
-          </div>
+        {/* Isolated "View Resume" Button with generous vertical spacing */}
+        <div className={styles.resumeWrapper}>
+          <button
+            onClick={handleResumeClick}
+            className={styles.resumeButton}
+            aria-label="View Résumé in a new tab"
+          >
+            <FileText size={16} />
+            <span>View R&eacute;sum&eacute;</span>
+            <ArrowUpRight size={14} className={styles.externalIcon} />
+          </button>
+        </div>
 
-          <div className={styles.heroSocials} aria-label="Social Profiles">
-            <a
-              href={profile.socials.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="LinkedIn Profile"
-            >
-              <Linkedin size={18} />
-            </a>
-            <a
-              href={profile.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="GitHub Profile"
-            >
-              <Github size={18} />
-            </a>
-            <a
-              href={profile.socials.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="Instagram Profile"
-            >
-              <Instagram size={18} />
-            </a>
-            <a
-              href={profile.socials.email}
-              className={styles.socialLink}
-              aria-label="Email Contact"
-            >
-              <Mail size={18} />
-            </a>
-          </div>
+        {/* Social Links with tight, uniform gap */}
+        <div className={styles.socialsGroup} aria-label="Social Links">
+          <a
+            href={profile.socials.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialIconLink}
+            aria-label="GitHub Profile"
+            title="GitHub"
+          >
+            <Github size={18} />
+          </a>
+          <a
+            href={profile.socials.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialIconLink}
+            aria-label="LinkedIn Profile"
+            title="LinkedIn"
+          >
+            <Linkedin size={18} />
+          </a>
+          <a
+            href={profile.socials.email}
+            className={styles.socialIconLink}
+            aria-label="Email Contact"
+            title="Email"
+          >
+            <Mail size={18} />
+          </a>
         </div>
       </section>
 
-      {/* 2. Tool Marquee */}
-      <ToolMarquee />
+      {/* 2. Minimal Tech Stack List */}
+      <section className={styles.sectionContainer} aria-label="Technologies & Tools">
+        <h2 className={styles.sectionHeading}>Technologies</h2>
+        <div className={styles.toolsBadgeGrid}>
+          {tools.map((tool) => (
+            <span key={tool.name} className={styles.toolBadge}>
+              {tool.name}
+            </span>
+          ))}
+        </div>
+      </section>
 
       {/* 3. Experience */}
-      <section aria-label="Experience">
+      <section id="experience" className={styles.sectionContainer} aria-label="Experience">
         <div className={styles.sectionHeader}>
-          <div className={styles.sectionLabel}>
-            <ShinyText text="Background" color="var(--color-accent)" />
-          </div>
           <h2 className={styles.sectionHeading}>Experience</h2>
-          <p className={styles.sectionDesc}>
-            Professional background spanning visual brand design and data engineering architecture.
+          <p className={styles.sectionSubheading}>
+            Professional background in data engineering architecture and software development.
           </p>
         </div>
 
         <div className={styles.experienceList}>
           {experiences.map((exp) => (
             <div key={exp.id} className={styles.experienceCard}>
-              <div className={styles.expLeft}>
-                <img
-                  src={exp.logoUrl}
-                  alt={exp.logoAlt}
-                  className={styles.expLogo}
-                  loading="lazy"
-                />
-                <div className={styles.expInfo}>
+              <div className={styles.expHeaderRow}>
+                <div>
                   <h3 className={styles.expRole}>{exp.role}</h3>
                   <span className={styles.expOrg}>{exp.organization}</span>
                 </div>
+                <span className={styles.expYear}>{exp.year}</span>
               </div>
-              <span className={styles.expYear}>{exp.year}</span>
+              {exp.description && <p className={styles.expDesc}>{exp.description}</p>}
             </div>
           ))}
         </div>
       </section>
 
       {/* 4. Selected Projects */}
-      <section aria-label="Selected Projects">
+      <section id="projects" className={styles.sectionContainer} aria-label="Selected Projects">
         <div className={styles.sectionHeader}>
-          <div className={styles.sectionLabel}>
-            <ShinyText text="My work" color="var(--color-accent)" />
-          </div>
-          <h2 className={styles.sectionHeading}>Selected Projects</h2>
-          <p className={styles.sectionDesc}>
-            Featured graphic design brand systems and data engineering projects.
+          <h2 className={styles.sectionHeading}>Projects</h2>
+          <p className={styles.sectionSubheading}>
+            Featured engineering projects and system architectures.
           </p>
         </div>
 
-        <ChromaGrid items={featuredProjects} radius={400} />
+        <div className={styles.projectsList}>
+          {projects.map((project) => (
+            <article key={project.id} className={styles.projectCard}>
+              <div className={styles.projectHeaderRow}>
+                <h3 className={styles.projectTitle}>
+                  <a
+                    href={project.destinationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.projectLink}
+                  >
+                    <span>{project.title}</span>
+                    <ArrowUpRight size={15} className={styles.arrowIcon} />
+                  </a>
+                </h3>
+                <span className={styles.projectYear}>{project.year}</span>
+              </div>
+              <p className={styles.projectDesc}>{project.description}</p>
+              {project.tags && (
+                <div className={styles.projectTagsGroup}>
+                  {project.tags.map((tag) => (
+                    <span key={tag} className={styles.projectTag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
       </section>
 
-      {/* 5. Contact Call to Action */}
-      <ContactCTA />
+      {/* 5. Contact Section */}
+      <section id="contact" className={styles.sectionContainer} aria-label="Contact">
+        <ContactCTA />
+      </section>
     </div>
   );
 };
 
 export default Home;
+
