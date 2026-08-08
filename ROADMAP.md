@@ -2,32 +2,16 @@
 
 **Stack:** React + TypeScript + Vite + React Router + CSS Modules · Motion/GSAP/OGL/MathJS as needed · Formspree · GitHub Pages + GitHub Actions · Vitest + React Testing Library
 
-**Status:** Planning only — no code written yet. Waiting for go-ahead.
+**Status:** Phase 0, 1, 2 & 3 Complete. Ready for Phase 4 (Referenced Components).
 
 ---
 
-## ⚠️ Missing inputs before Phase 0 can start
+## Prerequisite Status
 
-The spec references files that were **not included** in the upload:
+- `AppleDesign_SKILLS.md` — ✅ Available and integrated into tokens
+- `prompts/*.md` — ✅ All 7 component prompt files available
+- Placeholder Content Model — ✅ Ready to be defined in Phase 2
 
-- `AppleDesign_SKILLS.md` — the design-direction doc the whole visual system is supposed to follow
-- `prompts/ShinyText.md`
-- `prompts/SpecularButton.md`
-- `prompts/ChromaGrid.md`
-- `prompts/ClickSpark.md`
-- `prompts/PixelBlast.md`
-- `prompts/Stepper.md`
-- `prompts/GradualBlur.md`
-
-Also needed, not yet provided:
-
-- Real profile content: name/role copy confirmation, bio, tool list, experience records, project records (titles, categories, dates, image refs, destination URLs)
-- Portrait image, project images, any logos
-- Résumé Google Docs link
-- Social URLs (LinkedIn, GitHub, Instagram, email)
-- A Formspree account/form ID (can be a placeholder env var initially, but real value needed before Phase 8)
-
-None of this blocks _planning_, but Phase 0 (scaffolding) needs the seven `@`-referenced component specs at minimum, since they define exact implementation details I'd otherwise be guessing at. Everything else can start as placeholders and get swapped in later, per the spec's own content-management approach.
 
 ---
 

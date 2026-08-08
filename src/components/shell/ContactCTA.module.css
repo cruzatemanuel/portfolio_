@@ -1,0 +1,58 @@
+.ctaContainer {
+  margin: var(--space-16) auto;
+  padding: var(--space-12) var(--space-8);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-subtle);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 900px;
+}
+
+.heading {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  max-width: 600px;
+}
+
+.subtext {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  line-height: var(--line-height-body);
+}
+
+.ctaButton {
+  margin-top: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 113, 227, 0.35);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ctaButton:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-text-on-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 113, 227, 0.45);
+}
+
+.ctaButton:active {
+  transform: scale(0.97);
+}
