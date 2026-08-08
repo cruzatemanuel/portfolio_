@@ -2,7 +2,7 @@
 
 **Stack:** React + TypeScript + Vite + React Router + CSS Modules · Motion/GSAP/OGL/MathJS as needed · Formspree · GitHub Pages + GitHub Actions · Vitest + React Testing Library
 
-**Status:** Phase 0, 1, 2, 3 & 4 Complete. Ready for Phase 5 (Home Page).
+**Status:** Phase 0, 1, 2, 3, 4, 5 & 6 Complete. Ready for Phase 7 (Contact Page & Stepper Form).
 
 ---
 
