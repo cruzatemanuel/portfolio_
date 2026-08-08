@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <p className={styles.copyright}>
-          &copy; {new Date().getFullYear()} {name}. Built for clarity &amp; performance.
+          &copy; {new Date().getFullYear()} {name} &bull; Batangas City, Philippines &bull; Built for clarity &amp; performance.
         </p>
       </div>
     </footer>

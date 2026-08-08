@@ -5,6 +5,9 @@ import Header from './components/shell/Header';
 import Footer from './components/shell/Footer';
 import Home from './routes/Home';
 import DevProjects from './routes/DevProjects';
+import ExperiencePage from './routes/ExperiencePage';
+import CertificationsPage from './routes/CertificationsPage';
+import TechnologiesPage from './routes/TechnologiesPage';
 import Contact from './routes/Contact';
 
 export const AppContent: React.FC = () => {
@@ -17,6 +20,9 @@ export const AppContent: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/dev-projects" element={<DevProjects />} />
             <Route path="/projects" element={<DevProjects />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/certifications" element={<CertificationsPage />} />
+            <Route path="/technologies" element={<TechnologiesPage />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
@@ -35,4 +41,5 @@ export const App: React.FC = () => {
 };
 
 export default App;
+
 

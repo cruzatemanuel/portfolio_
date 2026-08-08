@@ -11,11 +11,13 @@ describe('Portfolio Content Model', () => {
   });
 
   it('contains non-empty list of tools', () => {
-    expect(portfolioContent.tools.length).toBeGreaterThan(3);
-    const hasData = portfolioContent.tools.some((t) => t.category === 'data');
-    const hasDev = portfolioContent.tools.some((t) => t.category === 'dev');
-    expect(hasData).toBe(true);
-    expect(hasDev).toBe(true);
+    expect(portfolioContent.tools.length).toBeGreaterThan(5);
+    const hasBackend = portfolioContent.tools.some((t) => t.category === 'backend-db');
+    const hasAnalytics = portfolioContent.tools.some((t) => t.category === 'analytics');
+    const hasAI = portfolioContent.tools.some((t) => t.category === 'ai');
+    expect(hasBackend).toBe(true);
+    expect(hasAnalytics).toBe(true);
+    expect(hasAI).toBe(true);
   });
 
   it('contains experience records with roles and organizations', () => {
