@@ -1,0 +1,11 @@
+.gradualBlurContainer {
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gradualBlurLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
