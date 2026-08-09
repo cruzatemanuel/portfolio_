@@ -10,10 +10,10 @@ export const portfolioContent: PortfolioData = {
     portraitAlt: 'Portrait of Emanuel Cruzat',
     resumeUrl: 'https://docs.google.com/document/d/placeholder-resume',
     socials: {
-      linkedin: 'https://linkedin.com/in/placeholder-emanuelcruzat',
-      github: 'https://github.com/placeholder-emanuelcruzat',
+      linkedin: 'https://www.linkedin.com/in/emanuel-cruzat-8bb340218/',
+      github: 'https://github.com/cruzatemanuel',
       instagram: 'https://instagram.com/placeholder-emanuelcruzat',
-      email: 'mailto:emanuel.cruzat@example.com',
+      email: 'mailto:emanuelcruzat@gmail.com',
     },
   },
 
