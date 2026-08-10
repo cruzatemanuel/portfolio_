@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Linkedin, Github, Mail, FileText, ArrowUpRight, GraduationCap, Award, ArrowRight } from 'lucide-react';
 import { portfolioContent } from '../content';
 import ContactCTA from '../components/shell/ContactCTA';
+import ShinyText from '../components/ui/ShinyText';
 import styles from '../components/home/Home.module.css';
 
 export const Home: React.FC = () => {
@@ -39,7 +40,14 @@ export const Home: React.FC = () => {
 
           <div className={styles.nameHeaderDetails}>
             <h1 className={styles.developerName}>{profile.name}</h1>
-            <span className={styles.primaryJobTitle}>Software &amp; Data Engineer</span>
+            <span className={styles.primaryJobTitle}>
+              <ShinyText
+                text="✦ Software & Data Engineer"
+                speed={3}
+                color="var(--color-text-secondary)"
+                shineColor="var(--color-accent)"
+              />
+            </span>
             
             {/* Social Icons right beside profile header */}
             <div className={styles.socialsGroup} aria-label="Social Links">
@@ -100,7 +108,14 @@ export const Home: React.FC = () => {
       {/* 2. Technologies Preview Section */}
       <section className={styles.sectionContainer} aria-label="Technologies Overview">
         <div className={styles.sectionHeaderRow}>
-          <h2 className={styles.sectionHeading}>Technologies</h2>
+          <h2 className={styles.sectionHeading}>
+            <ShinyText
+              text="✦ Technologies"
+              speed={3}
+              color="var(--color-text-primary)"
+              shineColor="var(--color-accent)"
+            />
+          </h2>
           <button
             onClick={() => navigate('/technologies')}
             className={styles.viewAllButton}
@@ -122,7 +137,14 @@ export const Home: React.FC = () => {
       {/* 3. Selected Projects (Top 3 Latest) */}
       <section id="projects" className={styles.sectionContainer} aria-label="Selected Projects">
         <div className={styles.sectionHeaderRow}>
-          <h2 className={styles.sectionHeading}>Projects</h2>
+          <h2 className={styles.sectionHeading}>
+            <ShinyText
+              text="✦ Projects"
+              speed={3}
+              color="var(--color-text-primary)"
+              shineColor="var(--color-accent)"
+            />
+          </h2>
           <button
             onClick={() => navigate('/projects')}
             className={styles.viewAllButton}
@@ -168,7 +190,14 @@ export const Home: React.FC = () => {
       {/* 4. Experience (Top 3 Latest) */}
       <section id="experience" className={styles.sectionContainer} aria-label="Experience">
         <div className={styles.sectionHeaderRow}>
-          <h2 className={styles.sectionHeading}>Experience</h2>
+          <h2 className={styles.sectionHeading}>
+            <ShinyText
+              text="✦ Experience"
+              speed={3}
+              color="var(--color-text-primary)"
+              shineColor="var(--color-accent)"
+            />
+          </h2>
           <button
             onClick={() => navigate('/experience')}
             className={styles.viewAllButton}
@@ -198,7 +227,14 @@ export const Home: React.FC = () => {
       {/* 5. Education Section */}
       <section className={styles.sectionContainer} aria-label="Education">
         <div className={styles.sectionHeaderRow}>
-          <h2 className={styles.sectionHeading}>Education</h2>
+          <h2 className={styles.sectionHeading}>
+            <ShinyText
+              text="✦ Education"
+              speed={3}
+              color="var(--color-text-primary)"
+              shineColor="var(--color-accent)"
+            />
+          </h2>
           <button
             onClick={() => navigate('/experience')}
             className={styles.viewAllButton}
@@ -230,7 +266,14 @@ export const Home: React.FC = () => {
       {/* 6. Certifications Section */}
       <section className={styles.sectionContainer} aria-label="Certifications">
         <div className={styles.sectionHeaderRow}>
-          <h2 className={styles.sectionHeading}>Certifications</h2>
+          <h2 className={styles.sectionHeading}>
+            <ShinyText
+              text="✦ Certifications"
+              speed={3}
+              color="var(--color-text-primary)"
+              shineColor="var(--color-accent)"
+            />
+          </h2>
           <button
             onClick={() => navigate('/certifications')}
             className={styles.viewAllButton}
