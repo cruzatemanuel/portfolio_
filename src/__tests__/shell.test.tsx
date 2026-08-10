@@ -21,6 +21,8 @@ describe('Shared Shell Components', () => {
     expect(screen.getByRole('link', { name: 'Projects' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Experience' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Contact' })).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'Technologies' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'Certifications' })).not.toBeInTheDocument();
   });
 
   it('renders Footer social links and copyright', () => {

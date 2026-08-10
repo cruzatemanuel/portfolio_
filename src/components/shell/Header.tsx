@@ -39,24 +39,6 @@ export const Header: React.FC = () => {
           </NavLink>
 
           <NavLink
-            to="/technologies"
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Technologies
-          </NavLink>
-
-          <NavLink
-            to="/certifications"
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Certifications
-          </NavLink>
-
-          <NavLink
             to="/contact"
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
@@ -107,24 +89,6 @@ export const Header: React.FC = () => {
             }
           >
             Experience
-          </NavLink>
-          <NavLink
-            to="/technologies"
-            onClick={() => setMobileOpen(false)}
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Technologies
-          </NavLink>
-          <NavLink
-            to="/certifications"
-            onClick={() => setMobileOpen(false)}
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.activeNavLink}` : styles.navLink
-            }
-          >
-            Certifications
           </NavLink>
           <NavLink
             to="/contact"
