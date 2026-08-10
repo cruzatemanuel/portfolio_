@@ -104,9 +104,9 @@ export const Home: React.FC = () => {
           <button
             onClick={() => navigate('/technologies')}
             className={styles.viewAllButton}
-            aria-label="View all technology categories"
+            aria-label="View all technologies"
           >
-            <span>All Stacks</span>
+            <span>All Technologies</span>
             <ArrowRight size={14} />
           </button>
         </div>
@@ -122,13 +122,11 @@ export const Home: React.FC = () => {
       {/* 3. Selected Projects (Top 3 Latest) */}
       <section id="projects" className={styles.sectionContainer} aria-label="Selected Projects">
         <div className={styles.sectionHeaderRow}>
-          <div>
-            <h2 className={styles.sectionHeading}>Projects</h2>
-          </div>
+          <h2 className={styles.sectionHeading}>Projects</h2>
           <button
             onClick={() => navigate('/projects')}
             className={styles.viewAllButton}
-            aria-label="View all projects page"
+            aria-label="View all projects"
           >
             <span>All Projects</span>
             <ArrowRight size={14} />
@@ -170,9 +168,7 @@ export const Home: React.FC = () => {
       {/* 4. Experience (Top 3 Latest) */}
       <section id="experience" className={styles.sectionContainer} aria-label="Experience">
         <div className={styles.sectionHeaderRow}>
-          <div>
-            <h2 className={styles.sectionHeading}>Experience</h2>
-          </div>
+          <h2 className={styles.sectionHeading}>Experience</h2>
           <button
             onClick={() => navigate('/experience')}
             className={styles.viewAllButton}
@@ -201,7 +197,17 @@ export const Home: React.FC = () => {
 
       {/* 5. Education Section */}
       <section className={styles.sectionContainer} aria-label="Education">
-        <h2 className={styles.sectionHeading}>Education</h2>
+        <div className={styles.sectionHeaderRow}>
+          <h2 className={styles.sectionHeading}>Education</h2>
+          <button
+            onClick={() => navigate('/experience')}
+            className={styles.viewAllButton}
+            aria-label="View education background"
+          >
+            <span>All Education</span>
+            <ArrowRight size={14} />
+          </button>
+        </div>
         <div className={styles.experienceList}>
           {education.map((edu) => (
             <div key={edu.id} className={styles.experienceCard}>
@@ -230,7 +236,7 @@ export const Home: React.FC = () => {
             className={styles.viewAllButton}
             aria-label="View all certifications"
           >
-            <span>All Certificates</span>
+            <span>All Certifications</span>
             <ArrowRight size={14} />
           </button>
         </div>
