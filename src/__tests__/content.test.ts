@@ -4,7 +4,7 @@ import { portfolioContent } from '../content';
 describe('Portfolio Content Model', () => {
   it('contains complete profile data', () => {
     expect(portfolioContent.profile.name).toBe('Emanuel Cruzat');
-    expect(portfolioContent.profile.role).toContain('Software & Data Engineer');
+    expect(portfolioContent.profile.role).toContain('Aspiring Data Engineer');
     expect(portfolioContent.profile.resumeUrl).toBeDefined();
     expect(portfolioContent.profile.socials.linkedin).toBeDefined();
     expect(portfolioContent.profile.socials.github).toBeDefined();

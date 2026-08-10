@@ -1,14 +1,24 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Linkedin, Github, Mail, FileText, ArrowUpRight, GraduationCap, Award, ArrowRight } from 'lucide-react';
-import { portfolioContent } from '../content';
-import ContactCTA from '../components/shell/ContactCTA';
-import ShinyText from '../components/ui/ShinyText';
-import PixelTransition from '../components/ui/PixelTransition';
-import styles from '../components/home/Home.module.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  Linkedin,
+  Github,
+  Mail,
+  FileText,
+  ArrowUpRight,
+  GraduationCap,
+  Award,
+  ArrowRight,
+} from "lucide-react";
+import { portfolioContent } from "../content";
+import ContactCTA from "../components/shell/ContactCTA";
+import ShinyText from "../components/ui/ShinyText";
+import PixelTransition from "../components/ui/PixelTransition";
+import styles from "../components/home/Home.module.css";
 
 export const Home: React.FC = () => {
-  const { profile, experiences, projects, tools, education, certifications } = portfolioContent;
+  const { profile, experiences, projects, tools, education, certifications } =
+    portfolioContent;
   const navigate = useNavigate();
 
   // Show top 3 latest items on Home page
@@ -16,7 +26,7 @@ export const Home: React.FC = () => {
   const latestProjects = projects.slice(0, 3);
 
   const handleResumeClick = () => {
-    window.open(profile.resumeUrl, '_blank', 'noopener,noreferrer');
+    window.open(profile.resumeUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -51,13 +61,13 @@ export const Home: React.FC = () => {
             <h1 className={styles.developerName}>{profile.name}</h1>
             <span className={styles.primaryJobTitle}>
               <ShinyText
-                text="Software & Data Engineer"
+                text="Aspiring Data Engineer"
                 speed={3}
                 color="var(--color-text-secondary)"
                 shineColor="var(--color-accent)"
               />
             </span>
-            
+
             {/* Social Icons right beside profile header */}
             <div className={styles.socialsGroup} aria-label="Social Links">
               <a
@@ -115,7 +125,10 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 2. Technologies Preview Section */}
-      <section className={styles.sectionContainer} aria-label="Technologies Overview">
+      <section
+        className={styles.sectionContainer}
+        aria-label="Technologies Overview"
+      >
         <div className={styles.sectionHeaderRow}>
           <h2 className={styles.sectionHeading}>
             <ShinyText
@@ -126,7 +139,7 @@ export const Home: React.FC = () => {
             />
           </h2>
           <button
-            onClick={() => navigate('/technologies')}
+            onClick={() => navigate("/technologies")}
             className={styles.viewAllButton}
             aria-label="View all technologies"
           >
@@ -144,7 +157,11 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 3. Selected Projects (Top 3 Latest) */}
-      <section id="projects" className={styles.sectionContainer} aria-label="Selected Projects">
+      <section
+        id="projects"
+        className={styles.sectionContainer}
+        aria-label="Selected Projects"
+      >
         <div className={styles.sectionHeaderRow}>
           <h2 className={styles.sectionHeading}>
             <ShinyText
@@ -155,7 +172,7 @@ export const Home: React.FC = () => {
             />
           </h2>
           <button
-            onClick={() => navigate('/projects')}
+            onClick={() => navigate("/projects")}
             className={styles.viewAllButton}
             aria-label="View all projects"
           >
@@ -197,7 +214,11 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 4. Experience (Top 3 Latest) */}
-      <section id="experience" className={styles.sectionContainer} aria-label="Experience">
+      <section
+        id="experience"
+        className={styles.sectionContainer}
+        aria-label="Experience"
+      >
         <div className={styles.sectionHeaderRow}>
           <h2 className={styles.sectionHeading}>
             <ShinyText
@@ -208,7 +229,7 @@ export const Home: React.FC = () => {
             />
           </h2>
           <button
-            onClick={() => navigate('/experience')}
+            onClick={() => navigate("/experience")}
             className={styles.viewAllButton}
             aria-label="View full experience page"
           >
@@ -227,7 +248,9 @@ export const Home: React.FC = () => {
                 </div>
                 <span className={styles.expYear}>{exp.year}</span>
               </div>
-              {exp.description && <p className={styles.expDesc}>{exp.description}</p>}
+              {exp.description && (
+                <p className={styles.expDesc}>{exp.description}</p>
+              )}
             </div>
           ))}
         </div>
@@ -245,7 +268,7 @@ export const Home: React.FC = () => {
             />
           </h2>
           <button
-            onClick={() => navigate('/experience')}
+            onClick={() => navigate("/experience")}
             className={styles.viewAllButton}
             aria-label="View education background"
           >
@@ -257,8 +280,20 @@ export const Home: React.FC = () => {
           {education.map((edu) => (
             <div key={edu.id} className={styles.experienceCard}>
               <div className={styles.expHeaderRow}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <GraduationCap size={20} style={{ marginTop: '0.2rem', color: 'var(--color-text-primary)' }} />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.75rem",
+                  }}
+                >
+                  <GraduationCap
+                    size={20}
+                    style={{
+                      marginTop: "0.2rem",
+                      color: "var(--color-text-primary)",
+                    }}
+                  />
                   <div>
                     <h3 className={styles.expRole}>{edu.degree}</h3>
                     <span className={styles.expOrg}>{edu.institution}</span>
@@ -266,7 +301,9 @@ export const Home: React.FC = () => {
                 </div>
                 <span className={styles.expYear}>{edu.year}</span>
               </div>
-              {edu.description && <p className={styles.expDesc}>{edu.description}</p>}
+              {edu.description && (
+                <p className={styles.expDesc}>{edu.description}</p>
+              )}
             </div>
           ))}
         </div>
@@ -284,7 +321,7 @@ export const Home: React.FC = () => {
             />
           </h2>
           <button
-            onClick={() => navigate('/certifications')}
+            onClick={() => navigate("/certifications")}
             className={styles.viewAllButton}
             aria-label="View all certifications"
           >
@@ -297,8 +334,20 @@ export const Home: React.FC = () => {
           {certifications.slice(0, 2).map((cert) => (
             <div key={cert.id} className={styles.experienceCard}>
               <div className={styles.expHeaderRow}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <Award size={20} style={{ marginTop: '0.2rem', color: 'var(--color-text-primary)' }} />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.75rem",
+                  }}
+                >
+                  <Award
+                    size={20}
+                    style={{
+                      marginTop: "0.2rem",
+                      color: "var(--color-text-primary)",
+                    }}
+                  />
                   <div>
                     <h3 className={styles.expRole}>{cert.title}</h3>
                     <span className={styles.expOrg}>{cert.issuer}</span>
@@ -306,14 +355,20 @@ export const Home: React.FC = () => {
                 </div>
                 <span className={styles.expYear}>{cert.year}</span>
               </div>
-              {cert.description && <p className={styles.expDesc}>{cert.description}</p>}
+              {cert.description && (
+                <p className={styles.expDesc}>{cert.description}</p>
+              )}
             </div>
           ))}
         </div>
       </section>
 
       {/* 7. Contact CTA */}
-      <section id="contact" className={styles.sectionContainer} aria-label="Contact">
+      <section
+        id="contact"
+        className={styles.sectionContainer}
+        aria-label="Contact"
+      >
         <ContactCTA />
       </section>
     </div>
@@ -321,5 +376,3 @@ export const Home: React.FC = () => {
 };
 
 export default Home;
-
-
