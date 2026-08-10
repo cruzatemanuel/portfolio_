@@ -38,12 +38,10 @@ export const portfolioContent: PortfolioData = {
     // Tools and Version controls
     { name: 'Git & GitHub', category: 'tools-vc', description: 'Distributed version control & GitHub Actions CI/CD workflows.' },
     { name: 'Docker', category: 'tools-vc', description: 'Containerization for consistent deployment environments.' },
-    { name: 'Vite & React', category: 'tools-vc', description: 'Modern frontend application bundling & component lifecycle.' },
-    { name: 'Linux / Bash', category: 'tools-vc', description: 'Shell scripting, server administration, and automation.' },
 
     // AI
-    { name: 'PyTorch', category: 'ai', description: 'Deep learning framework for model training & evaluation.' },
-    { name: 'Scikit-Learn', category: 'ai', description: 'Machine learning algorithms, classification, and regression.' },
+    { name: 'Gemini', category: 'ai', description: 'Google\'s AI model for natural language processing and generation.' },
+    { name: 'Claude Code', category: 'ai', description: 'AI coding assistant for software development.' },
     { name: 'OpenAI API & LangChain', category: 'ai', description: 'LLM integration, prompt engineering, and agent workflows.' },
   ],
 
