@@ -32,7 +32,7 @@ describe('Home Page (Phase 5)', () => {
     );
 
     expect(screen.getAllByText('Python')[0]).toBeInTheDocument();
-    expect(screen.getAllByText('React')[0]).toBeInTheDocument();
+    expect(screen.getAllByText('PostgreSQL')[0]).toBeInTheDocument();
     expect(screen.getAllByText('SQL')[0]).toBeInTheDocument();
   });
 
@@ -60,7 +60,7 @@ describe('Home Page (Phase 5)', () => {
     );
 
     expect(screen.getByText('✦ Projects')).toBeInTheDocument();
-    expect(screen.getByText('Real-time Streaming Pipeline')).toBeInTheDocument();
+    expect(screen.getByText('PhilWeather Data Pipeline')).toBeInTheDocument();
   });
 });
 

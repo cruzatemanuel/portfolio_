@@ -26,26 +26,21 @@ export const TechnologiesPage: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {categories.map((cat) => {
             const catTools = tools.filter((t) => t.category === cat.key);
             if (catTools.length === 0) return null;
 
             return (
               <div key={cat.key} className={styles.experienceCard}>
-                <h2 className={styles.sectionHeading} style={{ fontSize: '1.125rem', marginBottom: '0.5rem' }}>
+                <h2 className={styles.sectionHeading} style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>
                   {cat.title}
                 </h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div className={styles.toolsBadgeGrid}>
                   {catTools.map((tool) => (
-                    <div key={tool.name} style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <span className={styles.toolBadge} style={{ fontWeight: 600, color: 'var(--color-text-primary)' }}>
-                          {tool.name}
-                        </span>
-                      </div>
-                      {tool.description && <p className={styles.expDesc}>{tool.description}</p>}
-                    </div>
+                    <span key={tool.name} className={styles.toolBadge}>
+                      {tool.name}
+                    </span>
                   ))}
                 </div>
               </div>

@@ -23,7 +23,6 @@ export const portfolioContent: PortfolioData = {
     { name: 'SQL', category: 'backend-db', description: 'Advanced query optimization & relational data modeling.' },
     { name: 'PostgreSQL', category: 'backend-db', description: 'Relational database management & transactional storage.' },
     { name: 'PySpark', category: 'backend-db', description: 'Distributed data processing framework for large-scale datasets.' },
-    { name: 'FastAPI', category: 'backend-db', description: 'High-performance Python web framework for microservices.' },
 
     // Analytics
     { name: 'Pandas & NumPy', category: 'analytics', description: 'Data manipulation, aggregation, and numerical computation.' },
@@ -33,7 +32,7 @@ export const portfolioContent: PortfolioData = {
 
     // Design
     { name: 'Figma', category: 'design', description: 'Interface layout, wireframing, and component design systems.' },
-    { name: 'CSS Modules & Tokens', category: 'design', description: 'Clean monochromatic UI engineering and design tokens.' },
+    { name: 'Photoshop', category: 'design', description: 'Image editing and graphic design.' },
     { name: 'Typography & Layout', category: 'design', description: 'Geometric sans typography hierarchy and responsive grids.' },
 
     // Tools and Version controls

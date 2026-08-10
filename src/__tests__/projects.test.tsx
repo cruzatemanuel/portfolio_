@@ -18,7 +18,7 @@ describe('Project Listing Pages (Phase 6)', () => {
 
       expect(screen.getByRole('heading', { level: 1, name: 'Projects' })).toBeInTheDocument();
       expect(screen.getByPlaceholderText(/Search projects/i)).toBeInTheDocument();
-      expect(screen.getByText('Real-time Streaming Pipeline')).toBeInTheDocument();
+      expect(screen.getByText('PhilWeather Data Pipeline')).toBeInTheDocument();
     });
 
     it('filters projects by search input and clears filter', () => {
@@ -31,16 +31,16 @@ describe('Project Listing Pages (Phase 6)', () => {
       );
 
       const input = screen.getByPlaceholderText(/Search projects/i);
-      fireEvent.change(input, { target: { value: 'Pipeline' } });
+      fireEvent.change(input, { target: { value: 'PhilWeather' } });
 
-      expect(screen.getByText('Real-time Streaming Pipeline')).toBeInTheDocument();
+      expect(screen.getByText('PhilWeather Data Pipeline')).toBeInTheDocument();
 
       fireEvent.change(input, { target: { value: 'ZeroMatchXYZ' } });
       expect(screen.getByText('No dev projects found')).toBeInTheDocument();
       expect(screen.getByRole('button', { name: 'Clear search filter' })).toBeInTheDocument();
 
       fireEvent.click(screen.getByRole('button', { name: 'Clear search filter' }));
-      expect(screen.getByText('Real-time Streaming Pipeline')).toBeInTheDocument();
+      expect(screen.getByText('PhilWeather Data Pipeline')).toBeInTheDocument();
     });
   });
 });
