@@ -1,0 +1,39 @@
+.pixelatedImageCard {
+  background-color: var(--color-bg-secondary);
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.defaultContent,
+.activeContent,
+.pixelsGrid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.activeContent {
+  z-index: 2;
+  display: none;
+}
+
+.pixelsGrid {
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pixelBlock {
+  display: none;
+  position: absolute;
+}

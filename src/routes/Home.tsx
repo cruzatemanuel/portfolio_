@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Linkedin, Github, Mail, FileText, ArrowUpRight, GraduationCap, Award, ArrowRight } from 'lucide-react';
 import { portfolioContent } from '../content';
 import ContactCTA from '../components/shell/ContactCTA';
 import ShinyText from '../components/ui/ShinyText';
+import PixelTransition from '../components/ui/PixelTransition';
 import styles from '../components/home/Home.module.css';
 
 export const Home: React.FC = () => {
   const { profile, experiences, projects, tools, education, certifications } = portfolioContent;
   const navigate = useNavigate();
-  const [isHovered, setIsHovered] = useState(false);
 
   // Show top 3 latest items on Home page
   const latestExperiences = experiences.slice(0, 3);
@@ -24,17 +24,26 @@ export const Home: React.FC = () => {
       {/* 1. Hero / Profile Header */}
       <section className={styles.heroSection} aria-label="Introduction">
         <div className={styles.avatarRow}>
-          {/* Circular Hover Profile Picture */}
-          <div
-            className={styles.circularAvatarWrapper}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            title="Emanuel Cruzat"
-          >
-            <img
-              src={isHovered && profile.portraitHoverUrl ? profile.portraitHoverUrl : profile.portraitUrl}
-              alt={profile.portraitAlt}
-              className={styles.circularAvatarImg}
+          {/* Circular Pixelated Hover Profile Picture */}
+          <div className={styles.circularAvatarWrapper} title="Emanuel Cruzat">
+            <PixelTransition
+              firstContent={
+                <img
+                  src={profile.portraitUrl}
+                  alt={profile.portraitAlt}
+                  className={styles.circularAvatarImg}
+                />
+              }
+              secondContent={
+                <img
+                  src={profile.portraitHoverUrl || profile.portraitUrl}
+                  alt={profile.portraitAlt}
+                  className={styles.circularAvatarImg}
+                />
+              }
+              gridSize={8}
+              pixelColor="var(--color-accent)"
+              animationStepDuration={0.35}
             />
           </div>
 
@@ -42,7 +51,7 @@ export const Home: React.FC = () => {
             <h1 className={styles.developerName}>{profile.name}</h1>
             <span className={styles.primaryJobTitle}>
               <ShinyText
-                text="✦ Software & Data Engineer"
+                text="Software & Data Engineer"
                 speed={3}
                 color="var(--color-text-secondary)"
                 shineColor="var(--color-accent)"
