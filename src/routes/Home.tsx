@@ -119,94 +119,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Education Section */}
-      <section className={styles.sectionContainer} aria-label="Education">
-        <h2 className={styles.sectionHeading}>Education</h2>
-        <div className={styles.experienceList}>
-          {education.map((edu) => (
-            <div key={edu.id} className={styles.experienceCard}>
-              <div className={styles.expHeaderRow}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <GraduationCap size={20} style={{ marginTop: '0.2rem', color: 'var(--color-text-primary)' }} />
-                  <div>
-                    <h3 className={styles.expRole}>{edu.degree}</h3>
-                    <span className={styles.expOrg}>{edu.institution}</span>
-                  </div>
-                </div>
-                <span className={styles.expYear}>{edu.year}</span>
-              </div>
-              {edu.description && <p className={styles.expDesc}>{edu.description}</p>}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 4. Certifications Section */}
-      <section className={styles.sectionContainer} aria-label="Certifications">
-        <div className={styles.sectionHeaderRow}>
-          <h2 className={styles.sectionHeading}>Certifications</h2>
-          <button
-            onClick={() => navigate('/certifications')}
-            className={styles.viewAllButton}
-            aria-label="View all certifications"
-          >
-            <span>All Certificates</span>
-            <ArrowRight size={14} />
-          </button>
-        </div>
-
-        <div className={styles.experienceList}>
-          {certifications.slice(0, 2).map((cert) => (
-            <div key={cert.id} className={styles.experienceCard}>
-              <div className={styles.expHeaderRow}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <Award size={20} style={{ marginTop: '0.2rem', color: 'var(--color-text-primary)' }} />
-                  <div>
-                    <h3 className={styles.expRole}>{cert.title}</h3>
-                    <span className={styles.expOrg}>{cert.issuer}</span>
-                  </div>
-                </div>
-                <span className={styles.expYear}>{cert.year}</span>
-              </div>
-              {cert.description && <p className={styles.expDesc}>{cert.description}</p>}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 5. Experience (Top 3 Latest) */}
-      <section id="experience" className={styles.sectionContainer} aria-label="Experience">
-        <div className={styles.sectionHeaderRow}>
-          <div>
-            <h2 className={styles.sectionHeading}>Experience</h2>
-          </div>
-          <button
-            onClick={() => navigate('/experience')}
-            className={styles.viewAllButton}
-            aria-label="View full experience page"
-          >
-            <span>All Experience</span>
-            <ArrowRight size={14} />
-          </button>
-        </div>
-
-        <div className={styles.experienceList}>
-          {latestExperiences.map((exp) => (
-            <div key={exp.id} className={styles.experienceCard}>
-              <div className={styles.expHeaderRow}>
-                <div>
-                  <h3 className={styles.expRole}>{exp.role}</h3>
-                  <span className={styles.expOrg}>{exp.organization}</span>
-                </div>
-                <span className={styles.expYear}>{exp.year}</span>
-              </div>
-              {exp.description && <p className={styles.expDesc}>{exp.description}</p>}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 6. Selected Projects (Top 3 Latest) */}
+      {/* 3. Selected Projects (Top 3 Latest) */}
       <section id="projects" className={styles.sectionContainer} aria-label="Selected Projects">
         <div className={styles.sectionHeaderRow}>
           <div>
@@ -250,6 +163,93 @@ export const Home: React.FC = () => {
                 </div>
               )}
             </article>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. Experience (Top 3 Latest) */}
+      <section id="experience" className={styles.sectionContainer} aria-label="Experience">
+        <div className={styles.sectionHeaderRow}>
+          <div>
+            <h2 className={styles.sectionHeading}>Experience</h2>
+          </div>
+          <button
+            onClick={() => navigate('/experience')}
+            className={styles.viewAllButton}
+            aria-label="View full experience page"
+          >
+            <span>All Experience</span>
+            <ArrowRight size={14} />
+          </button>
+        </div>
+
+        <div className={styles.experienceList}>
+          {latestExperiences.map((exp) => (
+            <div key={exp.id} className={styles.experienceCard}>
+              <div className={styles.expHeaderRow}>
+                <div>
+                  <h3 className={styles.expRole}>{exp.role}</h3>
+                  <span className={styles.expOrg}>{exp.organization}</span>
+                </div>
+                <span className={styles.expYear}>{exp.year}</span>
+              </div>
+              {exp.description && <p className={styles.expDesc}>{exp.description}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 5. Education Section */}
+      <section className={styles.sectionContainer} aria-label="Education">
+        <h2 className={styles.sectionHeading}>Education</h2>
+        <div className={styles.experienceList}>
+          {education.map((edu) => (
+            <div key={edu.id} className={styles.experienceCard}>
+              <div className={styles.expHeaderRow}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                  <GraduationCap size={20} style={{ marginTop: '0.2rem', color: 'var(--color-text-primary)' }} />
+                  <div>
+                    <h3 className={styles.expRole}>{edu.degree}</h3>
+                    <span className={styles.expOrg}>{edu.institution}</span>
+                  </div>
+                </div>
+                <span className={styles.expYear}>{edu.year}</span>
+              </div>
+              {edu.description && <p className={styles.expDesc}>{edu.description}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 6. Certifications Section */}
+      <section className={styles.sectionContainer} aria-label="Certifications">
+        <div className={styles.sectionHeaderRow}>
+          <h2 className={styles.sectionHeading}>Certifications</h2>
+          <button
+            onClick={() => navigate('/certifications')}
+            className={styles.viewAllButton}
+            aria-label="View all certifications"
+          >
+            <span>All Certificates</span>
+            <ArrowRight size={14} />
+          </button>
+        </div>
+
+        <div className={styles.experienceList}>
+          {certifications.slice(0, 2).map((cert) => (
+            <div key={cert.id} className={styles.experienceCard}>
+              <div className={styles.expHeaderRow}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                  <Award size={20} style={{ marginTop: '0.2rem', color: 'var(--color-text-primary)' }} />
+                  <div>
+                    <h3 className={styles.expRole}>{cert.title}</h3>
+                    <span className={styles.expOrg}>{cert.issuer}</span>
+                  </div>
+                </div>
+                <span className={styles.expYear}>{cert.year}</span>
+              </div>
+              {cert.description && <p className={styles.expDesc}>{cert.description}</p>}
+            </div>
           ))}
         </div>
       </section>
