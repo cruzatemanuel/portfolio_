@@ -1,6 +1,7 @@
 import React from 'react';
 import { portfolioContent } from '../content';
 import ContactCTA from '../components/shell/ContactCTA';
+import BackButton from '../components/ui/BackButton';
 import styles from '../components/home/Home.module.css';
 
 export const ExperiencePage: React.FC = () => {
@@ -8,6 +9,7 @@ export const ExperiencePage: React.FC = () => {
 
   return (
     <div className={styles.homeContainer}>
+      <BackButton />
       <section className={styles.sectionContainer} aria-label="Professional Experience History">
         <div className={styles.sectionHeader}>
           <h1 className={styles.sectionHeading}>Experience</h1>

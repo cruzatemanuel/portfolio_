@@ -3,6 +3,7 @@ import { Search, X, Code2, ArrowUpRight } from 'lucide-react';
 import { portfolioContent } from '../content';
 import { useProjectSearch } from '../hooks/useProjectSearch';
 import ContactCTA from '../components/shell/ContactCTA';
+import BackButton from '../components/ui/BackButton';
 import styles from '../components/projects/ProjectListingPage.module.css';
 
 export const DevProjects: React.FC = () => {
@@ -11,6 +12,7 @@ export const DevProjects: React.FC = () => {
 
   return (
     <div className={styles.pageContainer}>
+      <BackButton />
       {/* Header & Search */}
       <section className={styles.heroBox} aria-label="Dev Projects Hero">
         <h1 className={styles.heading}>Projects</h1>

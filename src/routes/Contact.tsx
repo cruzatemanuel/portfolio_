@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Linkedin, Github, CheckCircle2, AlertCircle } from 'lucide-react';
 import { portfolioContent } from '../content';
 import Stepper, { Step } from '../components/ui/Stepper';
+import BackButton from '../components/ui/BackButton';
 import styles from '../components/contact/ContactPage.module.css';
 
 export interface ContactFormData {
@@ -81,6 +82,7 @@ export const Contact: React.FC = () => {
 
   return (
     <div className={styles.contactContainer}>
+      <BackButton />
       <section aria-label="Contact Page">
         <div className={styles.introHeader}>
           <h1 className={styles.heading}>Contact</h1>

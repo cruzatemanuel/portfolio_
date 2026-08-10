@@ -1,6 +1,7 @@
 import React from 'react';
 import { portfolioContent } from '../content';
 import ContactCTA from '../components/shell/ContactCTA';
+import BackButton from '../components/ui/BackButton';
 import styles from '../components/home/Home.module.css';
 
 export const TechnologiesPage: React.FC = () => {
@@ -16,6 +17,7 @@ export const TechnologiesPage: React.FC = () => {
 
   return (
     <div className={styles.homeContainer}>
+      <BackButton />
       <section className={styles.sectionContainer} aria-label="Technologies and Tech Stack">
         <div className={styles.sectionHeader}>
           <h1 className={styles.sectionHeading}>Technologies</h1>

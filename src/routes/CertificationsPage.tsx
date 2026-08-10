@@ -2,6 +2,7 @@ import React from 'react';
 import { Award, ArrowUpRight } from 'lucide-react';
 import { portfolioContent } from '../content';
 import ContactCTA from '../components/shell/ContactCTA';
+import BackButton from '../components/ui/BackButton';
 import styles from '../components/home/Home.module.css';
 
 export const CertificationsPage: React.FC = () => {
@@ -9,6 +10,7 @@ export const CertificationsPage: React.FC = () => {
 
   return (
     <div className={styles.homeContainer}>
+      <BackButton />
       <section className={styles.sectionContainer} aria-label="Certifications & Credentials">
         <div className={styles.sectionHeader}>
           <h1 className={styles.sectionHeading}>Certifications</h1>
