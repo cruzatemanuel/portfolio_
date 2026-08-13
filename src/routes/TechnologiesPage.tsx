@@ -2,6 +2,7 @@ import React from 'react';
 import { portfolioContent } from '../content';
 import ContactCTA from '../components/shell/ContactCTA';
 import BackButton from '../components/ui/BackButton';
+import TechIcon from '../components/ui/TechIcon';
 import styles from '../components/home/Home.module.css';
 
 export const TechnologiesPage: React.FC = () => {
@@ -39,7 +40,8 @@ export const TechnologiesPage: React.FC = () => {
                 <div className={styles.toolsBadgeGrid}>
                   {catTools.map((tool) => (
                     <span key={tool.name} className={styles.toolBadge}>
-                      {tool.name}
+                      <TechIcon name={tool.name} iconName={tool.iconName} size={15} />
+                      <span>{tool.name}</span>
                     </span>
                   ))}
                 </div>

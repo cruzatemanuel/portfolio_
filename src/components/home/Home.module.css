@@ -204,14 +204,23 @@
 }
 
 .toolBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  padding: 0.3rem 0.65rem;
+  padding: 0.35rem 0.7rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   background-color: var(--color-bg-secondary);
   color: var(--color-text-secondary);
   font-family: var(--font-mono);
+  transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.toolBadge:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 /* 3. Experience & Education Cards */

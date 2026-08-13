@@ -14,6 +14,7 @@ import { portfolioContent } from "../content";
 import ContactCTA from "../components/shell/ContactCTA";
 import ShinyText from "../components/ui/ShinyText";
 import PixelTransition from "../components/ui/PixelTransition";
+import TechIcon from "../components/ui/TechIcon";
 import styles from "../components/home/Home.module.css";
 
 export const Home: React.FC = () => {
@@ -150,7 +151,8 @@ export const Home: React.FC = () => {
         <div className={styles.toolsBadgeGrid}>
           {tools.slice(0, 10).map((tool) => (
             <span key={tool.name} className={styles.toolBadge}>
-              {tool.name}
+              <TechIcon name={tool.name} iconName={tool.iconName} size={15} />
+              <span>{tool.name}</span>
             </span>
           ))}
         </div>

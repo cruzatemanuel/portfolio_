@@ -1,5 +1,6 @@
 import React from 'react';
 import { portfolioContent } from '../../content';
+import TechIcon from '../ui/TechIcon';
 import styles from './ToolMarquee.module.css';
 
 export const ToolMarquee: React.FC = () => {
@@ -12,7 +13,7 @@ export const ToolMarquee: React.FC = () => {
       <div className={styles.marqueeTrack}>
         {marqueeItems.map((tool, idx) => (
           <div key={`${tool.name}-${idx}`} className={styles.toolBadge}>
-            <span className={styles.categoryDot} />
+            <TechIcon name={tool.name} iconName={tool.iconName} size={15} />
             <span className={styles.toolName}>{tool.name}</span>
             <span className={styles.toolCategory}>{tool.category}</span>
           </div>
