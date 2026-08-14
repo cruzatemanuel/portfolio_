@@ -55,6 +55,15 @@ export const portfolioContent: PortfolioData = {
       year: '2026 — Present',
       description: 'Responsible for managing the organization\'s public communications, social media presence, and information dissemination to members and stakeholders.',
     },
+    {
+      id: 'exp-2',
+      role: 'Multimedia Committee Member',
+      organization: 'Integrated Information Technology Student Society (IINTESS)',
+      logoUrl: '',
+      logoAlt: 'IINTESS Logo',
+      year: '2025 — 2026',
+      description: 'Contributed to the creation and management of multimedia content, including graphics, videos, and promotional materials for events and campaigns.',
+    },
   ],
 
   education: [
