@@ -99,7 +99,7 @@ export const portfolioContent: PortfolioData = {
       accentColor: '#09090b',
       featured: true,
       tags: ['Python', 'PostgreSQL', 'Matplotlib', 'pandas', 'NumPy', 'Seaborn'],
-      description: 'Automated data pipeline for processing and analyzing weather data in the Philippines spanning 10 years (2010–2019) across 137 Philippine cities.',
+      description: 'Automated data pipeline for processing and analyzing weather data in the Philippines, spanning 10 years (2010–2019) across 137 Philippine cities.',
     }
   ],
 };
