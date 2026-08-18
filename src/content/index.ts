@@ -42,7 +42,6 @@ export const portfolioContent: PortfolioData = {
     // AI
     { name: 'Gemini', category: 'ai', iconName: 'gemini', description: 'Google\'s AI model for natural language processing and generation.' },
     { name: 'Claude Code', category: 'ai', iconName: 'claude', description: 'AI coding assistant for software development.' },
-    { name: 'OpenAI API & LangChain', category: 'ai', iconName: 'openai-langchain', description: 'LLM integration, prompt engineering, and agent workflows.' },
   ],
 
   experiences: [
