@@ -8,7 +8,7 @@ export const portfolioContent: PortfolioData = {
     portraitUrl: './assets/profile_primary.png',
     portraitHoverUrl: './assets/profile_hover.png',
     portraitAlt: 'Portrait of Emanuel Cruzat',
-    resumeUrl: 'https://docs.google.com/document/d/placeholder-resume',
+    resumeUrl: 'https://docs.google.com/document/d/1qL9rbv6xytX_UdFmqQnHJC_NrqYeWO7i/edit?usp=sharing&ouid=109406289362191345908&rtpof=true&sd=true',
     socials: {
       linkedin: 'https://www.linkedin.com/in/emanuel-cruzat-8bb340218/',
       github: 'https://github.com/cruzatemanuel',
