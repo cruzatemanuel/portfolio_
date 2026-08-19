@@ -119,7 +119,7 @@ export const Home: React.FC = () => {
             aria-label="View Resume in a new tab"
           >
             <FileText size={16} />
-            <span>View R&eacute;sum&eacute;</span>
+            <span>View Resume</span>
             <ArrowUpRight size={14} className={styles.externalIcon} />
           </button>
         </div>
