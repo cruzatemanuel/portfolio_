@@ -116,7 +116,7 @@ export const Home: React.FC = () => {
           <button
             onClick={handleResumeClick}
             className={styles.resumeButton}
-            aria-label="View Résumé in a new tab"
+            aria-label="View Resume in a new tab"
           >
             <FileText size={16} />
             <span>View R&eacute;sum&eacute;</span>
