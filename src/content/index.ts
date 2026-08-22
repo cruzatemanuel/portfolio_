@@ -84,6 +84,14 @@ export const portfolioContent: PortfolioData = {
       credentialUrl: 'https://www.datacamp.com/certificate/DEA0012363987895',
       description: 'Validates proficiency in data engineering concepts, including ETL pipelines, data modeling, and cloud data solutions.',
     },
+    {
+      id: 'cert-2',
+      title: 'SAP Analytics Cloud & SAP Build Apps Certification',
+      issuer: 'ASEAN Foundation',
+      year: '2026',
+      credentialUrl: '',
+      description: 'Demonstrates expertise in using SAP Analytics Cloud for data visualization and SAP Build Apps for application development within the SAP ecosystem.',
+    },
   ],
 
   projects: [
