@@ -107,7 +107,20 @@ export const portfolioContent: PortfolioData = {
       featured: true,
       tags: ['Python', 'PostgreSQL', 'Matplotlib', 'pandas', 'NumPy', 'Seaborn'],
       description: 'Automated data pipeline for processing and analyzing weather data in the Philippines, spanning 10 years (2010–2019) across 137 Philippine cities.',
-    }
+    },
+    {
+      id: 'dev-2',
+      title: 'PHJob-Market-Pipeline',
+      category: 'Dev Project',
+      year: 'Ongoing',
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80',
+      imageAlt: 'Data flow dashboard screenshot',
+      destinationUrl: 'https://github.com/cruzatemanuel/PHJob-Market-Pipeline',
+      accentColor: '#09090b',
+      featured: true,
+      tags: ['Python', 'PostgreSQL', 'Matplotlib', 'pandas', 'NumPy', 'Seaborn'],
+      description: 'Automated data pipeline for processing and analyzing weather data in the Philippines, spanning 10 years (2010–2019) across 137 Philippine cities.',
+    },
   ],
 };
 
