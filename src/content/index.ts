@@ -119,7 +119,7 @@ export const portfolioContent: PortfolioData = {
       accentColor: '#09090b',
       featured: true,
       tags: ['Python', 'PostgreSQL', 'Matplotlib', 'pandas', 'Git', 'Docker'],
-      description: 'Automated data pipeline for processing and analyzing weather data in the Philippines, spanning 10 years (2010–2019) across 137 Philippine cities.',
+      description: 'An ETL pipeline that scrapes 200+ tech job postings from Jobstreet PH, and stores them in a PostgreSQL data warehouse',
     },
   ],
 };
