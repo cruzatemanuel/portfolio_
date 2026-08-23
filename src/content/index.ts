@@ -118,7 +118,7 @@ export const portfolioContent: PortfolioData = {
       destinationUrl: 'https://github.com/cruzatemanuel/PHJob-Market-Pipeline',
       accentColor: '#09090b',
       featured: true,
-      tags: ['Python', 'PostgreSQL', 'Matplotlib', 'pandas', 'NumPy', 'Seaborn'],
+      tags: ['Python', 'PostgreSQL', 'Matplotlib', 'pandas', 'Git', 'Docker'],
       description: 'Automated data pipeline for processing and analyzing weather data in the Philippines, spanning 10 years (2010–2019) across 137 Philippine cities.',
     },
   ],
