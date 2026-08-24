@@ -68,7 +68,7 @@ export const portfolioContent: PortfolioData = {
   education: [
     {
       id: 'edu-1',
-      degree: 'Bachelor of Science in Information Technology, major in Business Analytics',
+      degree: 'Bachelor of Science in Information Technology, specialization in Business Analytics',
       institution: 'Batangas State University',
       year: '2024 — Present',
       description: 'Focused on data analytics, database management, and business intelligence solutions.',
