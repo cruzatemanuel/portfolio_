@@ -29,6 +29,7 @@ export const portfolioContent: PortfolioData = {
     { name: 'Apache Spark', category: 'analytics', iconName: 'apachespark', description: 'Real-time analytics engine and batch data processing.' },
     { name: 'Metabase', category: 'analytics', iconName: 'metabase', description: 'Business intelligence visualization & SQL dashboarding.' },
     { name: 'dbt (Data Build Tool)', category: 'analytics', iconName: 'dbt', description: 'Analytics engineering & modular SQL transformations.' },
+    { name: 'R', category: 'analytics', iconName: 'R', description: 'Statistical computing and data visualization.' },
 
     // Design
     { name: 'Figma', category: 'design', iconName: 'figma', description: 'Interface layout, wireframing, and component design systems.' },
