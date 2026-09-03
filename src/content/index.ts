@@ -48,7 +48,7 @@ export const portfolioContent: PortfolioData = {
   experiences: [
     {
       id: 'exp-1',
-      role: 'Back-end AI Engineer Intern',
+      role: 'Backend AI Engineer Intern',
       organization: 'FlyRank AI',
       logoUrl: '',
       logoAlt: 'FlyRank AI Logo',
