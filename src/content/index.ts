@@ -48,6 +48,15 @@ export const portfolioContent: PortfolioData = {
   experiences: [
     {
       id: 'exp-1',
+      role: 'Back-end AI Engineer Intern',
+      organization: 'FlyRank AI',
+      logoUrl: '',
+      logoAlt: 'FlyRank AI Logo',
+      year: '2026 — Present',
+      description: 'Developing and optimizing back-end systems for AI-driven applications, focusing on data processing, model integration, and API development.',
+    },
+    {
+      id: 'exp-2',
       role: 'Public Information Officer 2',
       organization: 'Integrated Information Technology Student Society (IINTESS)',
       logoUrl: '',
@@ -56,7 +65,7 @@ export const portfolioContent: PortfolioData = {
       description: 'Responsible for managing the organization\'s public communications, social media presence, and information dissemination to members and stakeholders.',
     },
     {
-      id: 'exp-2',
+      id: 'exp-3',
       role: 'Multimedia Committee Member',
       organization: 'Integrated Information Technology Student Society (IINTESS)',
       logoUrl: '',
