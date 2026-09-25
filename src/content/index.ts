@@ -74,6 +74,15 @@ export const portfolioContent: PortfolioData = {
       year: '2025 — 2026',
       description: 'Contributed to the creation and management of multimedia content, including graphics, videos, and promotional materials for events and campaigns.',
     },
+    {
+      id: 'exp-4',
+      role: 'Multimedia Committee Member for Graphics',
+      organization: 'PAPAGAYO - Alangilan',
+      logoUrl: '',
+      logoAlt: 'Logo',
+      year: '2025',
+      description: 'Contributed to the creation and management of multimedia content, including graphics and promotional materials for events and campaigns.',
+    },
   ],
 
   education: [
